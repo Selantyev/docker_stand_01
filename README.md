@@ -27,7 +27,7 @@ EXPOSE 80
 
 Создать образ:
 
-`docker build -t vselantyev/nginx:v1 .`
+`docker build -t selantyev/nginx:v1 .`
 
 Проверить список образов:
 
@@ -35,7 +35,7 @@ EXPOSE 80
 
 ```
 REPOSITORY         TAG             IMAGE ID       CREATED         SIZE
-vselantyev/nginx   v1              209e9228f3fb   7 seconds ago   22.3MB
+selantyev/nginx    v1              209e9228f3fb   7 seconds ago   22.3MB
 nginx              1.19.6-alpine   629df02b47c8   7 weeks ago     22.3MB
 hello-world        latest          bf756fb1ae65   13 months ago   13.3kB
 ```
@@ -70,4 +70,15 @@ CONTAINER ID   IMAGE          COMMAND                  CREATED              STAT
 
 # Собранный образ необходимо запушить в docker hub и дать ссылку на ваш репозиторий.
 
+`docker login`
+
+Загрузить образ в репозиторий:
+
+`docker push selantyev/nginx:v1`
+
+Загрузить образ из репозитория:
+
+`docker pull selantyev/nginx:v1`
+
+https://hub.docker.com/repository/docker/selantyev/nginx
 
